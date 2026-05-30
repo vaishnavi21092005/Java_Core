@@ -1,25 +1,27 @@
-//5 5 5 5 5
-//5 4 4 4 5
-//5 4 3 4 5
-//5 4 4 4 5
-//5 5 5 5 5
-
-
-
+//1 2 3 4 
+//8 7 6 5
+//9 10 11 12
+//16 15 14 13
 class Demo{
 	public static void main(String []args){
-		int row=5;
-		int col=5;
-		for(int i=1;i<=5;i++){
-			for(int j=1;j<=5;j++){
-				if(i==1 || j==1 || i==row || j==col){
-					System.out.print(5);
-				}else{
-					System.out.print(4);
+		int num=4;
+		int count=1;
+		for(int i=1;i<=4;i++){
+			for(int j=1;j<=4;j++){
+				if(i%2!=0){
+					System.out.print(count);
+					count++;
 				}
+				if(i%2==0){
+					System.out.print(count);
+					count--;
+				}
+				
 			}
+			num--;
+			count=count+num;
 			System.out.println();
-		}
+		}	
 	}
 }
 			
